@@ -109,7 +109,7 @@ R Programming assignment Week 3
 
 <!-- -->
 
-    makeVector <- function(x = numeric()) {
+    makeVector <- function(m = numeric()) {
            i <- NULL  
            set <- function(y) 
            {
@@ -127,4 +127,20 @@ R Programming assignment Week 3
                get = get,
                setinverse = setinverse,
                getinverse = getinverse)
+    }
+    
+    cacheSolve <- function(x, ...) 
+    {
+      m <- x$getinverse()
+
+      if (!is.null(i)) 
+      {
+        message("getting cached data")
+        return(i)
+      }
+
+      data <- x$get()
+      m <- solve(data) %*% data
+      x$setinverse(i)
+      m
     }
