@@ -110,15 +110,21 @@ R Programming assignment Week 3
 <!-- -->
 
     makeVector <- function(x = numeric()) {
-            m <- NULL
-            set <- function(y) {
-                    x <<- y
-                    m <<- NULL
-            }
-            get <- function() x
-            setmean <- function(mean) m <<- mean
-            getmean <- function() m
-            list(set = set, get = get,
-                 setmean = setmean,
-                 getmean = getmean)
+           i <- NULL  
+           set <- function(y) 
+           {
+             m <<- y
+             i <<- NULL
+           }
+
+           get <- function() {m}
+
+           setinverse <- function(inverse) {i <<- inverse}
+
+           getinverse <- function() {i}
+
+           list(set = set,
+               get = get,
+               setinverse = setinverse,
+               getinverse = getinverse)
     }
