@@ -107,46 +107,18 @@ This assignment will be graded via peer assessment.
 
 R Programming assignment Week 3
 
-## A pair of functions that cache the inverse of a matrix
+<!-- -->
 
-## Creates a special matrix object that can cache its inverse
-
-makeCacheMatrix <- function(x = matrix()) {
-   ##
-   i <- NULL  
-   set <- function(y) 
-   {
-     x <<- y
-     i <<- NULL
-   }
-  
-   get <- function() {x}
-   
-   setinverse <- function(inverse) {i <<- inverse}
-   
-   getinverse <- function() {i}
-  
-   list(set = set,
-       get = get,
-       setinverse = setinverse,
-       getinverse = getinverse)
-}
-
-
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-        x <- x$getinverse()
-  
-  if (!is.null(i)) 
-  {
-    message("getting cached data")
-    return(i)
-  }
-  
-  data <- x$get()
-  x <- solve(data) %*% data
-  x$setinverse(i)
-  m
-}
+    makeVector <- function(x = numeric()) {
+            m <- NULL
+            set <- function(y) {
+                    x <<- y
+                    m <<- NULL
+            }
+            get <- function() x
+            setmean <- function(mean) m <<- mean
+            getmean <- function() m
+            list(set = set, get = get,
+                 setmean = setmean,
+                 getmean = getmean)
+    }
