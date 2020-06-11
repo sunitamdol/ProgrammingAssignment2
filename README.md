@@ -108,8 +108,7 @@ This assignment will be graded via peer assessment.
 R Programming assignment Week 3
 
 <!-- -->
-    ## Caching the inverse of a matrix
-     
+    ## Caching the inverse of a matrix     
     makeVector <- function(m = numeric()) {
            i <- NULL  
            set <- function(y) 
