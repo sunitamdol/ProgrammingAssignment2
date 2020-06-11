@@ -109,8 +109,6 @@ R Programming assignment Week 3
 
 <!-- -->
     ## A pair of functions that cache the inverse of a matrix
-
-
     ## Creates a special matrix object that can cache its inverse
     makeVector <- function(m = numeric()) {
            i <- NULL  
